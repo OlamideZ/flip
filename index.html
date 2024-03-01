@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flip_card">
+        <div class="flip_card_side card_front">
+            <p id="id1">Crad Front</p>
+        </div>
+        <div class="flip_card_side card_back">
+            <p id="id2">Crad Back</p>
+        </div>
+    </div>
+    <script>
+        const bt1 = document.querySelector('#id1')
+        const bt2 = document.querySelector('#id2')
+        bt1.addEventListener('click', ()=>{
+            const card = document.querySelector('.flip_card')
+            console.log(1)
+            card.classList.add('active')
+        })
+        bt2.addEventListener('click', ()=>{
+            const card = document.querySelector('.flip_card')
+            console.log(2)
+            card.classList.remove('active')
+        })
+    </script>
+</body>
+</html>

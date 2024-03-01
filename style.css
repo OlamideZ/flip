@@ -1,0 +1,30 @@
+.flip_card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    width: max-content;
+    position: relative;
+    height: 100px;
+  }
+  .flip_card_side{
+    height: 100px;
+    width: 100px;
+    transition: all .8s;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+  }
+  .card_front{
+    background-color: blue;
+  }
+  .card_back{
+    background-color: green;
+    transform: rotateY(180deg);
+  }
+  .flip_card.active .card_front{
+    transform: rotateY(-180deg);
+  }
+  .flip_card.active .card_back{
+    transform: rotateY(0);
+  }
